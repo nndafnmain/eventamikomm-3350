@@ -21,19 +21,23 @@ class DatabaseSeeder extends Seeder
         // =========================
         // 1. USERS
         // =========================
-        User::create([
-            'name'     => 'Admin Amikom',
-            'email'    => 'admin@amikom.ac.id',
-            'password' => Hash::make('password'),
-            'role'     => 'admin',
-        ]);
+        User::firstOrCreate(
+    ['email' => 'admin@amikom.ac.id'],
+    [
+        'name'     => 'Admin Amikom',
+        'password' => Hash::make('password'),
+        'role'     => 'admin',
+    ]
+);
 
-        User::create([
-            'name'     => 'Test User',
-            'email'    => 'test@example.com',
-            'password' => Hash::make('password'),
-            'role'     => 'user',
-        ]);
+        User::firstOrCreate(
+    ['email' => 'test@example.com'],
+    [
+        'name'     => 'Test User',
+        'password' => Hash::make('password'),
+        'role'     => 'user',
+    ]
+);
 
 
         // =========================

@@ -18,7 +18,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // --- 1. Akun Admin & User ---
+        // =========================
+        // 1. USERS
+        // =========================
         User::create([
             'name'     => 'Admin Amikom',
             'email'    => 'admin@amikom.ac.id',
@@ -30,25 +32,30 @@ class DatabaseSeeder extends Seeder
             'name'     => 'Test User',
             'email'    => 'test@example.com',
             'password' => Hash::make('password'),
+            'role'     => 'user',
         ]);
 
 
-        // --- 2. Kategori Event ---
+        // =========================
+        // 2. CATEGORIES
+        // =========================
         $categoryIT = Category::create([
             'name' => 'Seminar IT',
             'slug' => 'seminar-it',
         ]);
 
-        $categoryEnt = Category::firstOrCreate([
-            'name' => 'Entertaiment',
-            'slug' => 'entertaiment',
+        $categoryEnt = Category::create([
+            'name' => 'Entertainment',
+            'slug' => 'entertainment',
         ]);
 
 
-        // --- 3. Sampel Events ---
+        // =========================
+        // 3. EVENTS
+        // =========================
         Event::create([
             'category_id' => $categoryEnt->id,
-            'title'       => 'Jazz Night 2025',
+            'title'       => 'Jazz Night 2026',
             'description' => 'Nikmati malam yang indah dengan alunan musik jazz yang merdu.',
             'date'        => '2026-05-10 19:00:00',
             'location'    => 'Amikom Baru',
@@ -59,23 +66,23 @@ class DatabaseSeeder extends Seeder
 
         Event::create([
             'category_id' => $categoryIT->id,
-            'title'       => 'Hackaton - Unleash Your Inner Developer',
+            'title'       => 'Hackathon - Unleash Your Inner Developer',
             'description' => 'Ayo asah skill coding kamu dan ciptakan solusi inovatif untuk tantangan masa depan!',
-            'date'        => '2026-05-05 10:00:00',
+            'date'        => '2026-05-15 10:00:00',
             'location'    => 'Inkubator Amikom',
-            'price'       => 50000,
-            'stock'       => 100,
+            'price'       => 75000,
+            'stock'       => 150,
             'poster_path' => 'posters/event-2.png',
         ]);
 
         Event::create([
             'category_id' => $categoryIT->id,
-            'title'       => 'AI & FUTURE TECH SUMMIT 2026',
+            'title'       => 'AI & Future Tech Summit 2026',
             'description' => 'Jelajahi tren terkini dalam kecerdasan buatan dan teknologi masa depan bersama para ahli di bidangnya.',
-            'date'        => '2026-05-01 13:00:00',
+            'date'        => '2026-06-01 13:00:00',
             'location'    => 'Cinema Unit 6',
-            'price'       => 50000,
-            'stock'       => 100,
+            'price'       => 100000,
+            'stock'       => 200,
             'poster_path' => 'posters/event-3.png',
         ]);
     }

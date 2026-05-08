@@ -33,3 +33,11 @@ Halaman Beranda: https://eventamikomm-3350-main-ynwvsu.free.laravel.cloud/
 Halaman Detail Event: https://eventamikomm-3350-main-ynwvsu.free.laravel.cloud/event-detail.html
 
 Halaman Checkout: https://eventamikomm-3350-main-ynwvsu.free.laravel.cloud/checkout.html
+
+# Tugas 3
+
+Sudah Menambahkan Migration dan Seeder
+
+# Tugas 4
+
+Halaman CRUD event admin: https://eventamikomm-3350-main-ynwvsu.free.laravel.cloud/admin/events

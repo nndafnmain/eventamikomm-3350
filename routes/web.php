@@ -5,7 +5,8 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\EventController as EventAdminController;
-
+use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\PartnerController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/event/1', [EventController::class, 'show'])->name('events.show');
@@ -14,6 +15,8 @@ Route::get('/my-ticket', [EventController::class, 'ticket'])->name('ticket');
 
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::resource('events', EventAdminController::class);
+    Route::resource('categories', CategoryController::class);
+    Route::resource('partners', PartnerController::class);
 });
 
 // Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {

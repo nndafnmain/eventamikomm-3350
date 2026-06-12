@@ -1,18 +1,15 @@
 @extends('layouts.admin', ['title' => 'Kelola Event'])
 
+@section('page_title', 'Kelola Event')
+@section('page_subtitle', 'Buat dan atur acara seru Anda di sini.')
+
+@section('page_actions')
+<a href="{{ route('admin.events.create') }}" class="px-6 py-3 bg-indigo-600 text-white rounded-2xl font-bold shadow-lg hover:bg-indigo-700 transition">
+    + Tambah Event Baru
+</a>
+@endsection
 
 @section('content')
-<header class="flex justify-between items-center mb-10">
-    <div>
-        <h1 class="text-3xl font-black">Kelola Event</h1>
-        <p class="text-slate-500 font-medium">Buat dan atur acara seru Anda di sini.</p>
-    </div>
-    <a href="{{ route('admin.events.create') }}" class="px-6 py-3 bg-indigo-600 text-white rounded-2xl font-bold shadow-lg hover:bg-indigo-700 transition">
-        + Tambah Event Baru
-    </a>
-</header>
-
-
 <div class="bg-white rounded-[2.5rem] border border-slate-100 shadow-sm overflow-hidden">
     <div class="overflow-x-auto">
 <table class="w-full text-left border-collapse">

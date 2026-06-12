@@ -41,3 +41,7 @@ Sudah Menambahkan Migration dan Seeder
 # Tugas 4
 
 Halaman CRUD event admin: https://eventamikomm-3350-main-ynwvsu.free.laravel.cloud/admin/events
+
+# Tugas 8
+
+Halaman CRUD event admin: https://eventamikomm-3350-main-ynwvsu.free.laravel.cloud/admin/login

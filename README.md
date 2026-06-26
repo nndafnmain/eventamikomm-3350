@@ -49,3 +49,7 @@ Halaman CRUD event admin: https://eventamikomm-3350-main-ynwvsu.free.laravel.clo
 # Tugas 10
 
 Halaman CRUD event admin: https://eventamikomm-3350-main-ynwvsu.free.laravel.cloud/admin/transactions
+
+# Tugas 11
+
+Halaman CRUD event admin: https://eventamikomm-3350-main-ynwvsu.free.laravel.cloud/

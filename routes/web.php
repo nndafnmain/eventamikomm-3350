@@ -65,5 +65,14 @@ Route::prefix('admin')->name('admin.')->group(function () {
         
         // Laporan Transaksi Admin (Sudah dipindahkan ke dalam prefix admin)
         Route::get('transactions', [TransactionController::class, 'index'])->name('transactions.index');
+        Route::post('transactions/{transaction}/sync', [TransactionController::class, 'sync'])->name('transactions.sync');
     });
 });
+
+Route::get('/payment/{order_id}', [\App\Http\Controllers\CheckoutController::class, 'payment'])
+    ->name('checkout.payment');
+
+Route::get('/success/{order_id}', [\App\Http\Controllers\CheckoutController::class, 'success'])
+    ->name('checkout.success');
+
+Route::post('/midtrans-notification', [CheckoutController::class, 'notification'])->name('midtrans.notification');

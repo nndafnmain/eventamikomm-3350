@@ -76,3 +76,5 @@ Route::get('/success/{order_id}', [\App\Http\Controllers\CheckoutController::cla
     ->name('checkout.success');
 
 Route::post('/midtrans-notification', [CheckoutController::class, 'notification'])->name('midtrans.notification');
+
+Route::post('/midtrans/callback', [\App\Http\Controllers\MidtransWebhookController::class, 'handle']);

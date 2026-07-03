@@ -55,3 +55,8 @@ Halaman CRUD event admin: https://eventamikomm-3350-main-ynwvsu.free.laravel.clo
 https://eventamikomm-3350-main-ynwvsu.free.laravel.cloud/events/1
 https://eventamikomm-3350-main-ynwvsu.free.laravel.cloud/checkout/1
 https://eventamikomm-3350-main-ynwvsu.free.laravel.cloud/payment/TRX-1782483835-vS4yY
+
+# Tugas 12
+
+Dashboard admin: https://eventamikomm-3350-main-ynwvsu.free.laravel.cloud/admin/dashboard
+Laporan transaksi: https://eventamikomm-3350-main-ynwvsu.free.laravel.cloud/admin/transactions
